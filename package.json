@@ -1,9 +1,9 @@
 {
-    "name": "equicord",
+    "name": "zrmcord",
     "private": "true",
     "version": "1.14.7.1",
-    "description": "The other cutest Discord client mod",
-    "homepage": "https://github.com/Equicord/Equicord#readme",
+    "description": "ZRMCord - A private Equicord fork by Streets",
+    "homepage": "https://github.com/mearaj/ZRMCord#readme",
     "bugs": {
         "url": "https://github.com/Equicord/Equicord/issues"
     },
@@ -12,7 +12,7 @@
         "url": "git+https://github.com/Equicord/Equicord.git"
     },
     "license": "GPL-3.0-or-later",
-    "author": "Equicord",
+    "author": "Streets",
     "scripts": {
         "build": "pnpm depCheck && node --require=./scripts/suppressExperimentalWarnings.js scripts/build/build.mjs",
         "buildStandalone": "pnpm build --standalone",
