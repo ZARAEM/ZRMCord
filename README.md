@@ -1,39 +1,10 @@
-# [<img src="./browser/icon.png" width="40" align="left" alt="Equicord">](https://github.com/Equicord/Equicord) Equicord
+# ZRMCord
 
-[![Equibop](https://img.shields.io/badge/Equibop-grey?style=flat)](https://github.com/Equicord/Equibop)
-[![Tests](https://github.com/Equicord/Equicord/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/Equicord/Equicord/actions/workflows/test.yml)
-[![Discord](https://img.shields.io/discord/1173279886065029291.svg?color=768AD4&label=Discord&logo=discord&logoColor=white)](https://equicord.org/discord)
+ZRMCord is a private fork of [Equicord](https://github.com/Equicord/Equicord) (itself a fork of [Vencord](https://github.com/Vendicated/Vencord)), maintained by Streets with additional userplugins and personalizations.
 
-Equicord is a fork of [Vencord](https://github.com/Vendicated/Vencord), with over 300+ plugins.
+---
 
-You can join our [Discord server](https://equicord.org/discord) for commits, changes, chatting, or even support.
-
-### Included Plugins
-
-Our included plugins can be found [here](https://equicord.org/plugins).
-
-## Installing / Uninstalling
-
-Windows
-
-- [GUI](https://github.com/Equicord/Equilotl/releases/latest/download/Equilotl.exe)
-- [CLI](https://github.com/Equicord/Equilotl/releases/latest/download/EquilotlCli.exe)
-
-MacOS
-
-- [GUI](https://github.com/Equicord/Equilotl/releases/latest/download/Equilotl.MacOS.zip)
-
-Linux
-
-- [GUI](https://github.com/Equicord/Equilotl/releases/latest/download/Equilotl-x11)
-- [CLI](https://github.com/Equicord/Equilotl/releases/latest/download/EquilotlCli-Linux)
-- [AUR](https://aur.archlinux.org/packages?O=0&K=equicord)
-
-```shell
-sh -c "$(curl -sS https://raw.githubusercontent.com/Equicord/Equicord/refs/heads/main/misc/install.sh)"
-```
-
-## Installing Equicord Devbuild
+## Building from Source
 
 ### Dependencies
 
@@ -47,13 +18,13 @@ Install `pnpm`:
 npm i -g pnpm
 ```
 
-> :exclamation: **IMPORTANT** Make sure you aren't using an admin/root terminal from here onwards. It **will** mess up your Discord/Equicord instance and you **will** most likely have to reinstall.
+> :exclamation: **IMPORTANT** Make sure you aren't using an admin/root terminal from here onwards. It **will** mess up your Discord/ZRMCord instance.
 
-Clone Equicord:
+Clone ZRMCord:
 
 ```shell
-git clone https://github.com/Equicord/Equicord
-cd Equicord
+git clone https://github.com/mearaj/ZRMCord
+cd ZRMCord
 ```
 
 Install dependencies:
@@ -62,57 +33,66 @@ Install dependencies:
 pnpm install --frozen-lockfile
 ```
 
-Build Equicord:
+Build:
 
 ```shell
 pnpm build
 ```
 
-Inject Equicord into your desktop client:
+Inject into your desktop client:
 
 ```shell
 pnpm inject
 ```
 
-Build Equicord for web:
+Build for web:
 
 ```shell
 pnpm buildWeb
 ```
 
-After building Equicord's web extension, locate the appropriate ZIP file in the `dist` directory and follow your browser’s guide for installing custom extensions, if supported.
+---
 
-Note: Firefox extension zip requires Firefox for developers
+## Added Userplugins
+
+These are plugins added on top of Equicord's built-in plugin set, living in `src/userplugins/`. All original authors are credited below.
+
+| Plugin | Description | Original Source |
+|--------|-------------|-----------------|
+| **NitroSniper** | Automatically redeems Nitro gift links spotted in chat | [neoarz/NitroSniper](https://github.com/neoarz/NitroSniper) |
+| **BoostCounts** | Right-click a server to view all boosters and their boost counts | [Reathe/BoosterCount](https://github.com/Reathe/BoosterCount) |
+| **TypingFriends** | See which friends are typing anywhere — friends list section and server icon badges | [debxylen/Vencord (typingFriends)](https://github.com/debxylen/Vencord/tree/main/src/plugins/typingFriends) |
+| **EmbeddedURLs** | Converts TikTok, Twitter/X, and Instagram links to embeddable proxies before sending | [ddadiani/Vencord-EmbeddedLinks](https://github.com/ddadiani/Vencord-EmbeddedLinks) |
+| **StereoScreenshareAudio** | Patches WebRTC SDP to fix stereo audio while watching streams on Vesktop | [nerdwave-nick/Vencord-Stereo-Fix](https://github.com/nerdwave-nick/Vencord-Stereo-Fix) |
+| **KeepGifPickerOpen** | Prevents the GIF picker from closing after sending a GIF | [pacxwheaa/KeepGifPickerOpen](https://github.com/pacxwheaa/KeepGifPickerOpen) |
+| **CrashHandlerEnhanced** | Advanced crash recovery with memory monitoring, detailed logging, and statistics | [Mifu999/Equicord-Userplugins](https://github.com/Mifu999/Equicord-Userplugins/tree/main/userplugins/crashHandlerEnhanced) |
+| **CustomStreamTopQ** | Replace stream preview thumbnails with custom images, supports profiles and slideshows | [MrTopQ/customStream-Vencord](https://github.com/MrTopQ/customStream-Vencord) |
+| **FakeDeafen** | Adds a button to fake-deafen yourself in voice channels | [hyyven/Vencord-FakeDeafen](https://github.com/hyyven/Vencord-FakeDeafen) |
+| **DiscordLock** | Password-locks Discord on startup, inactivity, or when entering specific servers/channels/DMs | [vejcowski/DiscordLock](https://github.com/vejcowski/DiscordLock) |
+| **OpSec** | AI-powered grammar autocorrect using Claude (optional API key), with regex fallback | [1nject-s-Vencord-Plugins/OpSec](https://github.com/1nject-s-Vencord-Plugins/OpSec) |
+| **vAnalyzer** | Security scanner — analyzes URLs and files in messages using VirusTotal, FishFish, and more | [nay-cat/vAnalyzer](https://github.com/nay-cat/vAnalyzer) |
+
+---
 
 ## Credits
 
-Thank you to [Vendicated](https://github.com/Vendicated) for creating [Vencord](https://github.com/Vendicated/Vencord) & [Suncord](https://github.com/verticalsync/Suncord) by [verticalsync](https://github.com/verticalsync) for helping when needed.
+- [Vendicated](https://github.com/Vendicated) for creating [Vencord](https://github.com/Vendicated/Vencord)
+- [Equicord](https://github.com/Equicord/Equicord) team for the upstream fork this is based on
+- [verticalsync](https://github.com/verticalsync) for [Suncord](https://github.com/verticalsync/Suncord)
+- All original plugin authors listed in the table above
 
-## Star History
-
-<a href="https://star-history.com/#Equicord/Equicord&Timeline">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Equicord/Equicord&type=Timeline&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Equicord/Equicord&type=Timeline" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Equicord/Equicord&type=Timeline" />
-  </picture>
-</a>
+---
 
 ## Disclaimer
 
-Discord is trademark of Discord Inc., and solely mentioned for the sake of descriptivity.
-Mentioning it does not imply any affiliation with or endorsement by Discord Inc.
-Vencord is not connected to Equicord and as such, all donation links go to Vendicated's donation link.
+Discord is a trademark of Discord Inc., mentioned here solely for descriptive purposes.
+Client modifications are against Discord's Terms of Service. Use at your own risk.
 
 <details>
-<summary>Using Equicord violates Discord's terms of service</summary>
+<summary>More on ToS</summary>
 
-Client modifications are against Discord’s Terms of Service.
+Discord is generally indifferent toward client mods and there are no known cases of bans for personal use. However, if your account is critical to you, consider the risk before using any client mod.
 
-However, Discord is pretty indifferent about them and there are no known cases of users getting banned for using client mods! So you should generally be fine if you don’t use plugins that implement abusive behaviour. But no worries, all inbuilt plugins are safe to use!
-
-Regardless, if your account is essential to you and getting disabled would be a disaster for you, you should probably not use any client mods (not exclusive to Equicord), just to be safe.
-
-Additionally, make sure not to post screenshots with Equicord in a server where you might get banned for it.
+Do not use plugins that automate abusive behavior or violate platform rules beyond personal customization.
 
 </details>
