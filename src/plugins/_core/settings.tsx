@@ -153,17 +153,14 @@ export default definePlugin({
 
         const panel: SettingsLayoutNode = {
             key: key + "_panel",
-            legacySearchKey: key + "_panel",
             type: LayoutTypes.PANEL,
             useTitle: () => panelTitle,
             buildLayout: () => [{
                 type: LayoutTypes.CATEGORY,
                 key: key + "_category",
-                legacySearchKey: key + "_category",
                 buildLayout: () => [{
                     type: LayoutTypes.CUSTOM,
                     key: key + "_custom",
-                    legacySearchKey: key + "_custom",
                     Component: Component,
                     useSearchTerms: () => [title]
                 }]
@@ -172,9 +169,11 @@ export default definePlugin({
 
         return ({
             key,
-            legacySearchKey: key,
+            legacySearchKey: title.toUpperCase(),
+            getLegacySearchKey: () => title.toUpperCase(),
             type: LayoutTypes.SIDEBAR_ITEM,
             useTitle: () => title,
+            useLabel: () => title,
             icon: () => <Icon width={20} height={20} />,
             buildLayout: () => [panel]
         });
@@ -245,9 +244,11 @@ export default definePlugin({
 
         const equicordSection: SettingsLayoutNode = {
             key: "equicord_section",
-            legacySearchKey: "equicord_section",
+            legacySearchKey: "EQUICORD_SECTION",
+            getLegacySearchKey: () => "EQUICORD_SECTION",
             type: LayoutTypes.SECTION,
             useTitle: () => "Equicord Settings",
+            useLabel: () => "Equicord Settings",
             buildLayout: () => equicordEntries
         };
 
