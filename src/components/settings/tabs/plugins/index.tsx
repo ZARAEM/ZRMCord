@@ -214,10 +214,10 @@ export default function PluginSettings() {
                 if (!enabled) return false;
                 break;
             case SearchStatus.EQUICORD:
-                if (!PluginMeta[plugin.name].folderName.startsWith("src/equicordplugins/")) return false;
+                if (!PluginMeta[plugin.name]?.folderName?.startsWith("src/equicordplugins/")) return false;
                 break;
             case SearchStatus.VENCORD:
-                if (!PluginMeta[plugin.name].folderName.startsWith("src/plugins/")) return false;
+                if (!PluginMeta[plugin.name]?.folderName?.startsWith("src/plugins/")) return false;
                 break;
             case SearchStatus.NEW:
                 if (!newPluginsSet?.has(plugin.name)) return false;
