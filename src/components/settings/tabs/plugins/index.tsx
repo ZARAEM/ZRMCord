@@ -229,7 +229,7 @@ export default function PluginSettings() {
                 if (!plugin.name.endsWith("API")) return false;
                 break;
             case SearchStatus.ZRMCORD:
-                if (!PluginMeta[plugin.name]?.folderName.startsWith("src/zrmcordplugins/")) return false;
+                if (!PluginMeta[plugin.name]?.folderName?.startsWith("src/zrmcordplugins/")) return false;
                 break;
         }
 
