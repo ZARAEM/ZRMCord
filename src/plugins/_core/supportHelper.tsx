@@ -222,8 +222,8 @@ function generatePluginList() {
     const enabledPlugins = Object.keys(plugins)
         .filter(p => isPluginEnabled(p) && !isApiPlugin(p));
 
-    const enabledStockPlugins = enabledPlugins.filter(p => !PluginMeta[p].userPlugin).sort();
-    const enabledUserPlugins = enabledPlugins.filter(p => PluginMeta[p].userPlugin).sort();
+    const enabledStockPlugins = enabledPlugins.filter(p => !PluginMeta[p]?.userPlugin).sort();
+    const enabledUserPlugins = enabledPlugins.filter(p => PluginMeta[p]?.userPlugin).sort();
 
     const user = UserStore.getCurrentUser();
 

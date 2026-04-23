@@ -262,7 +262,7 @@ export default definePlugin({
 
         if (idx === -1) {
             idx = 2;
-        } else if (settingsLocation.startsWith("below")) {
+        } else if (settingsLocation?.startsWith("below")) {
             idx += 1;
         }
 
