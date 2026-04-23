@@ -174,7 +174,7 @@ async function correctWithAI(text: string, replyContext: string | null): Promise
 
         return restore(aiResult, placeholders);
     } catch (err) {
-        logger.warn($1, err);
+        logger.warn("API request failed", err);
         return null;
     }
 }

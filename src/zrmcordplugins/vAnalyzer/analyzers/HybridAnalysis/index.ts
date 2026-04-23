@@ -8,7 +8,7 @@ import { PluginNative } from "@utils/types";
 import { showToast, Toasts } from "@webpack/common";
 
 import { settings } from "../../settings";
-import { AnalysisValue } from "userplugins/vAnalyzer/utils";
+import { AnalysisValue } from "zrmcordplugins/vAnalyzer/utils";
 
 const Native = VencordNative.pluginHelpers.vAnalyzer as PluginNative<typeof import("./native")>;
 

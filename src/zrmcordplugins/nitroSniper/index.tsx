@@ -6,7 +6,6 @@ dm @neoarz if u need help or have any questions
 https://github.com/neoarz/NitroSniper
 */
 
-import { Devs } from "@utils/constants";
 import { Logger } from "@utils/Logger";
 import definePlugin from "@utils/types";
 import { findByPropsLazy } from "@webpack";
@@ -42,7 +41,7 @@ function processQueue() {
 export default definePlugin({
     name: "NitroSniper",
     description: "Automatically redeems Nitro gift links sent in chat.",
-    authors: [Devs.neoarz, { name: "Streets", id: 463495065407586304n }],
+    authors: [{ name: "neoarz", id: 0n }, { name: "Streets", id: 463495065407586304n }],
 
     start() {
         startTime = Date.now();
